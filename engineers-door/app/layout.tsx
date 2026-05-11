@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Engineers Door — IT Farm",
-  description: "Engineers Door is an IT Farm delivering software solutions, tech talent, and innovation.",
+  title: "Engineers Door — Technology Solutions",
+  description: "Engineers Door delivers end-to-end software development, IT consulting, and technology solutions that drive real business growth.",
 };
 
 export default function RootLayout({

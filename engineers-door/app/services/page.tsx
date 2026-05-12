@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesList from "@/components/services/ServicesList";
 import ServicesCTA from "@/components/services/ServicesCTA";
+import FAQ from "@/components/ui/FAQ";
+import { servicesFAQ } from "@/lib/faqData";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -28,6 +30,7 @@ export default function ServicesPage() {
       <Navbar />
       <ServicesHero />
       <ServicesList />
+      <FAQ items={servicesFAQ} title="Common Questions About Our Services" />
       <ServicesCTA />
       <Footer />
     </main>

@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactHero from "@/components/contact/ContactHero";
 import ContactSection from "@/components/contact/ContactSection";
+import FAQ from "@/components/ui/FAQ";
+import { contactFAQ } from "@/lib/faqData";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -27,6 +29,7 @@ export default function ContactPage() {
       <Navbar />
       <ContactHero />
       <ContactSection />
+      <FAQ items={contactFAQ} title="Before You Reach Out" />
       <Footer />
     </main>
   );

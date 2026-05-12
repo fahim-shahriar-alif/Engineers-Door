@@ -14,8 +14,8 @@ const footerLinks = {
     { label: "IT Consulting", href: "/services" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ],
 };
 
@@ -73,7 +73,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="text-gray-500 hover:text-[#00c2ff] transition-colors duration-200"
+                  className="text-gray-500 hover:text-[#00c2ff] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#00c2ff] rounded"
                 >
                   {s.icon}
                 </a>
@@ -92,7 +92,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-gray-500 hover:text-[#00c2ff] text-sm transition-colors duration-200"
+                      className="text-gray-500 hover:text-[#00c2ff] text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#00c2ff] rounded"
                     >
                       {link.label}
                     </Link>

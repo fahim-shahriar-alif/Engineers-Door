@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useToast } from "@/components/ui/Toast";
 
 export default function ApplyForm() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ export default function ApplyForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const { showToast } = useToast();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -21,6 +23,7 @@ export default function ApplyForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    showToast("Application received! We'll review it and respond within 3 business days.", "success");
   };
 
   return (

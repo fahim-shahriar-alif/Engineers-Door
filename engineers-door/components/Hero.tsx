@@ -4,6 +4,15 @@ import Link from "next/link";
 import { motion, type Transition } from "framer-motion";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
+import CountUp from "@/components/ui/CountUp";
+
+const stats = [
+  { value: 100, suffix: "+", label: "Projects Delivered" },
+  { value: 50, suffix: "+", label: "Expert Engineers" },
+  { value: 30, suffix: "+", label: "Global Clients" },
+  { value: 5, suffix: "+", label: "Years of Experience" },
+];
+
 const floatingOrbs = [
   { size: 600, top: "-10%", left: "30%", color: "#00c2ff", duration: 14, delay: 0 },
   { size: 400, top: "40%", left: "-5%", color: "#0055ff", duration: 18, delay: 3 },
@@ -150,12 +159,7 @@ export default function Hero() {
           {...fadeUp(0.7)}
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            {[
-              { value: "100+", label: "Projects Delivered" },
-              { value: "50+", label: "Expert Engineers" },
-              { value: "30+", label: "Global Clients" },
-              { value: "5+", label: "Years of Experience" },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 className="text-center"
@@ -163,7 +167,12 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 + i * 0.12 }}
               >
-                <p className="text-3xl md:text-4xl font-bold text-white">{stat.value}</p>
+                <CountUp
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  delay={800 + i * 120}
+                  className="text-3xl md:text-4xl font-bold text-white"
+                />
                 <p className="text-gray-500 text-xs mt-1.5 tracking-wide">{stat.label}</p>
               </motion.div>
             ))}

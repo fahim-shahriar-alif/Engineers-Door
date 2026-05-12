@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <Services />
-      <WhyUs />
-      <TechStack />
+      <div id="home"><Hero /></div>
+      <div id="services"><Services /></div>
+      <div id="why-us"><WhyUs /></div>
+      <div id="tech"><TechStack /></div>
       <Footer />
     </main>
   );

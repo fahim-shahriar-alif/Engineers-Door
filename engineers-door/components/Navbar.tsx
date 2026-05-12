@@ -4,35 +4,42 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/", sectionId: "home" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/services", sectionId: "services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
+const homeSections = ["home", "services", "why-us", "tech"];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const activeSection = useActiveSection(pathname === "/" ? homeSections : []);
 
-  // Add shadow + blur on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (link: (typeof navLinks)[0]) => {
+    if (pathname === "/" && link.sectionId) {
+      if (activeSection === "") return link.href === "/";
+      return activeSection === link.sectionId;
+    }
+    return link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+  };
 
   return (
     <nav
@@ -52,19 +59,16 @@ export default function Navbar() {
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => {
-            const active = isActive(link.href);
+            const active = isActive(link);
             return (
               <li key={link.href} className="relative">
                 <Link
                   href={link.href}
                   className={`relative px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 block ${
-                    active
-                      ? "text-[#00c2ff]"
-                      : "text-gray-400 hover:text-white"
+                    active ? "text-[#00c2ff]" : "text-gray-400 hover:text-white"
                   }`}
                 >
                   {link.label}
-                  {/* Active underline indicator */}
                   {active && (
                     <motion.span
                       layoutId="nav-indicator"
@@ -99,29 +103,13 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
-          <motion.svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            animate={menuOpen ? "open" : "closed"}
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
-          </motion.svg>
+          </svg>
         </button>
       </div>
 
@@ -137,7 +125,7 @@ export default function Navbar() {
           >
             <ul className="flex flex-col gap-1 py-4">
               {navLinks.map((link) => {
-                const active = isActive(link.href);
+                const active = isActive(link);
                 return (
                   <li key={link.href}>
                     <Link
@@ -148,9 +136,7 @@ export default function Navbar() {
                           : "text-gray-400 hover:text-white hover:bg-white/5"
                       }`}
                     >
-                      {active && (
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00c2ff] flex-shrink-0" />
-                      )}
+                      {active && <span className="w-1.5 h-1.5 rounded-full bg-[#00c2ff] flex-shrink-0" />}
                       {link.label}
                     </Link>
                   </li>

@@ -1,7 +1,8 @@
+import PageHeroOrbs from "@/components/ui/PageHeroOrbs";
+
 export default function CareersHero() {
   return (
     <section className="relative bg-[#0a0f2c] pt-24 pb-20 px-6 overflow-hidden">
-      {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -10,8 +11,7 @@ export default function CareersHero() {
           backgroundSize: "60px 60px",
         }}
       />
-      {/* Glow */}
-      <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#00c2ff] opacity-[0.06] rounded-full blur-[120px] pointer-events-none" />
+      <PageHeroOrbs />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <div className="flex items-center justify-center gap-3 mb-4">

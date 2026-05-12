@@ -61,13 +61,14 @@ const reasons = [
   },
 ];
 
+import AnimateIn from "@/components/ui/AnimateIn";
+
 export default function WhyUs() {
   return (
     <section className="bg-[#070b1f] py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Section Header */}
-        <div className="text-center mb-16">
+        <AnimateIn className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="h-px w-10 bg-[#00c2ff]" />
             <span className="text-[#00c2ff] text-xs font-semibold tracking-[0.2em] uppercase">
@@ -82,26 +83,25 @@ export default function WhyUs() {
             We don't just write code — we solve problems, build relationships,
             and deliver results that matter.
           </p>
-        </div>
+        </AnimateIn>
 
-        {/* Reasons Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason) => (
-            <div key={reason.title} className="flex gap-5">
-              {/* Icon Box */}
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff]">
-                {reason.icon}
+          {reasons.map((reason, i) => (
+            <AnimateIn key={reason.title} delay={i * 0.08}>
+              <div className="flex gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff]">
+                  {reason.icon}
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold text-base mb-1.5">
+                    {reason.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {reason.description}
+                  </p>
+                </div>
               </div>
-              {/* Text */}
-              <div>
-                <h3 className="text-white font-semibold text-base mb-1.5">
-                  {reason.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {reason.description}
-                </p>
-              </div>
-            </div>
+            </AnimateIn>
           ))}
         </div>
 

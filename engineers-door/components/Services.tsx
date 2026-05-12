@@ -61,13 +61,15 @@ const services = [
   },
 ];
 
+import AnimateIn from "@/components/ui/AnimateIn";
+
 export default function Services() {
   return (
     <section className="bg-[#0a0f2c] py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <AnimateIn className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="h-px w-10 bg-[#00c2ff]" />
             <span className="text-[#00c2ff] text-xs font-semibold tracking-[0.2em] uppercase">
@@ -82,30 +84,24 @@ export default function Services() {
             From strategy to execution, we cover the full spectrum of technology
             services your business needs to grow.
           </p>
-        </div>
+        </AnimateIn>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group bg-[#0d1435] border border-white/5 rounded-xl p-7 hover:border-[#00c2ff]/40 hover:bg-[#0f1840] transition-all duration-300"
-            >
-              {/* Icon */}
-              <div className="text-[#00c2ff] mb-5 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
+          {services.map((service, i) => (
+            <AnimateIn key={service.title} delay={i * 0.08}>
+              <div className="group bg-[#0d1435] border border-white/5 rounded-xl p-7 hover:border-[#00c2ff]/40 hover:bg-[#0f1840] transition-all duration-300 h-full">
+                <div className="text-[#00c2ff] mb-5 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-white font-semibold text-lg mb-2">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            </AnimateIn>
           ))}
         </div>
 

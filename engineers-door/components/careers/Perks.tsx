@@ -1,31 +1,33 @@
+import { Icon } from "@iconify/react";
+
 const perks = [
   {
-    icon: "🌍",
+    icon: "ph:globe-bold",
     title: "Remote First",
     description: "Work from anywhere in the world. We've been fully remote since day one.",
   },
   {
-    icon: "📈",
+    icon: "ph:trend-up-bold",
     title: "Growth & Learning",
     description: "Annual learning budget, conference tickets, and a culture that encourages growth.",
   },
   {
-    icon: "💰",
+    icon: "ph:currency-circle-dollar-bold",
     title: "Competitive Pay",
     description: "Market-rate salaries with performance bonuses and equity options for senior roles.",
   },
   {
-    icon: "🏥",
+    icon: "ph:heart-bold",
     title: "Health Coverage",
     description: "Comprehensive health, dental, and vision insurance for you and your family.",
   },
   {
-    icon: "⏰",
+    icon: "ph:clock-bold",
     title: "Flexible Hours",
     description: "We care about output, not hours. Work when you're most productive.",
   },
   {
-    icon: "🤝",
+    icon: "ph:users-bold",
     title: "Great Team",
     description: "Work alongside talented, kind, and collaborative people who genuinely care.",
   },
@@ -58,7 +60,9 @@ export default function Perks() {
               key={perk.title}
               className="bg-[#0d1435] border border-white/5 rounded-xl p-7 hover:border-[#00c2ff]/30 transition-all duration-300"
             >
-              <span className="text-3xl mb-4 block">{perk.icon}</span>
+              <div className="w-12 h-12 rounded-lg bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff] mb-5">
+                <Icon icon={perk.icon} className="w-6 h-6" />
+              </div>
               <h3 className="text-white font-semibold text-lg mb-2">{perk.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{perk.description}</p>
             </div>

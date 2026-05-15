@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react";
+
 const positions = [
   {
     title: "Senior Full-Stack Engineer",
@@ -130,15 +132,11 @@ export default function OpenPositions() {
                 </div>
                 <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
                   <span className="flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-                    </svg>
+                    <Icon icon="ph:buildings-bold" className="w-3.5 h-3.5" />
                     {pos.department}
                   </span>
                   <span className="flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                    </svg>
+                    <Icon icon="ph:map-pin-bold" className="w-3.5 h-3.5" />
                     {pos.location}
                   </span>
                 </div>

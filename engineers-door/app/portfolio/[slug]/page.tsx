@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { projects } from "@/lib/portfolioData";
@@ -61,9 +62,7 @@ export default async function CaseStudyPage({
             href="/portfolio"
             className="inline-flex items-center gap-2 text-gray-500 hover:text-[#00c2ff] text-sm transition-colors duration-200 mb-8"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
+            <Icon icon="ph:arrow-left-bold" className="w-4 h-4" />
             Back to Portfolio
           </Link>
 
@@ -76,9 +75,7 @@ export default async function CaseStudyPage({
               {project.industry}
             </span>
             <span className="text-gray-400 text-xs bg-white/5 border border-white/10 px-3 py-1 rounded-full flex items-center gap-1.5">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-              </svg>
+              <Icon icon="ph:map-pin-bold" className="w-3 h-3" />
               {project.region}
             </span>
           </div>

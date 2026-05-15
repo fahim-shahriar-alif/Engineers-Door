@@ -1,101 +1,8 @@
 "use client";
 
 import { useState } from "react";
-
-const categories = ["All", "Web", "Mobile", "Cloud", "Design", "Consulting"];
-
-const projects = [
-  {
-    title: "FinTrack — Finance Dashboard",
-    category: "Web",
-    tags: ["Next.js", "PostgreSQL", "Tailwind"],
-    description:
-      "A real-time financial analytics dashboard for a fintech startup, handling 500K+ daily transactions with sub-second query performance.",
-    result: "3x faster reporting",
-    color: "from-[#0055ff] to-[#00c2ff]",
-    icon: "📊",
-  },
-  {
-    title: "MediConnect — Healthcare App",
-    category: "Mobile",
-    tags: ["React Native", "Node.js", "MongoDB"],
-    description:
-      "A telemedicine platform connecting patients with doctors via video, chat, and appointment scheduling — launched in 3 countries.",
-    result: "50K+ active users",
-    color: "from-[#7c3aed] to-[#00c2ff]",
-    icon: "🏥",
-  },
-  {
-    title: "ShopFlow — E-Commerce Platform",
-    category: "Web",
-    tags: ["Next.js", "Stripe", "Redis"],
-    description:
-      "A high-performance e-commerce platform with real-time inventory, multi-vendor support, and a custom checkout experience.",
-    result: "2x conversion rate",
-    color: "from-[#00c2ff] to-[#7c3aed]",
-    icon: "🛒",
-  },
-  {
-    title: "CloudMigrate — Infrastructure Overhaul",
-    category: "Cloud",
-    tags: ["AWS", "Terraform", "Docker"],
-    description:
-      "Migrated a legacy monolith to a microservices architecture on AWS, reducing infrastructure costs and improving uptime to 99.99%.",
-    result: "40% cost reduction",
-    color: "from-[#0055ff] to-[#7c3aed]",
-    icon: "☁️",
-  },
-  {
-    title: "EduPath — Learning Management System",
-    category: "Web",
-    tags: ["React", "GraphQL", "PostgreSQL"],
-    description:
-      "A full-featured LMS for an EdTech company with live classes, progress tracking, certificates, and a mobile-first design.",
-    result: "10K+ enrolled students",
-    color: "from-[#7c3aed] to-[#0055ff]",
-    icon: "🎓",
-  },
-  {
-    title: "LogiTrack — Fleet Management",
-    category: "Mobile",
-    tags: ["Flutter", "Firebase", "Google Maps"],
-    description:
-      "A real-time fleet tracking and logistics management app for a transport company managing 200+ vehicles across the country.",
-    result: "30% fuel savings",
-    color: "from-[#00c2ff] to-[#0055ff]",
-    icon: "🚛",
-  },
-  {
-    title: "BrandForge — Design System",
-    category: "Design",
-    tags: ["Figma", "Storybook", "React"],
-    description:
-      "Built a comprehensive design system and component library for a SaaS company, cutting UI development time in half.",
-    result: "50% faster UI dev",
-    color: "from-[#7c3aed] to-[#00c2ff]",
-    icon: "🎨",
-  },
-  {
-    title: "SecureOps — DevSecOps Pipeline",
-    category: "Cloud",
-    tags: ["GitHub Actions", "Kubernetes", "Vault"],
-    description:
-      "Designed and implemented a fully automated DevSecOps pipeline with security scanning, secret management, and zero-downtime deployments.",
-    result: "Zero security incidents",
-    color: "from-[#0055ff] to-[#00c2ff]",
-    icon: "🔐",
-  },
-  {
-    title: "RetailIQ — Digital Transformation",
-    category: "Consulting",
-    tags: ["Strategy", "Architecture", "Roadmap"],
-    description:
-      "Led a full digital transformation engagement for a retail chain — from technology audit to vendor selection and implementation roadmap.",
-    result: "18-month roadmap delivered",
-    color: "from-[#00c2ff] to-[#7c3aed]",
-    icon: "🏪",
-  },
-];
+import Link from "next/link";
+import { projects, categories } from "@/lib/portfolioData";
 
 export default function PortfolioGrid() {
   const [active, setActive] = useState("All");
@@ -128,28 +35,44 @@ export default function PortfolioGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((project) => (
             <div
-              key={project.title}
+              key={project.slug}
               className="group bg-[#0d1435] border border-white/5 rounded-2xl overflow-hidden hover:border-[#00c2ff]/30 transition-all duration-300 flex flex-col"
             >
               {/* Card Header */}
-              <div className={`bg-gradient-to-br ${project.color} p-8 flex items-center justify-between`}>
+              <div className={`bg-gradient-to-br ${project.color} p-8 flex items-start justify-between`}>
                 <span className="text-4xl">{project.icon}</span>
-                <span className="text-white/70 text-xs font-semibold tracking-widest uppercase bg-white/10 px-3 py-1 rounded-full">
-                  {project.category}
-                </span>
+                <div className="flex flex-col items-end gap-2">
+                  <span className="text-white/80 text-xs font-semibold tracking-widest uppercase bg-white/10 px-3 py-1 rounded-full">
+                    {project.category}
+                  </span>
+                  <span className="text-white/60 text-xs bg-white/10 px-2.5 py-0.5 rounded-full">
+                    {project.industry}
+                  </span>
+                </div>
               </div>
 
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-white font-bold text-lg mb-2">
+                <h3 className="text-white font-bold text-lg mb-1 group-hover:text-[#00c2ff] transition-colors duration-200">
                   {project.title}
                 </h3>
+                <p className="text-[#00c2ff] text-xs font-medium mb-3">{project.tagline}</p>
                 <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                   {project.description}
                 </p>
 
+                {/* Metrics Row */}
+                <div className="grid grid-cols-3 gap-2 mb-4 py-4 border-y border-white/5">
+                  {project.metrics.map((m) => (
+                    <div key={m.label} className="text-center">
+                      <p className="text-white font-bold text-base">{m.value}</p>
+                      <p className="text-gray-500 text-xs mt-0.5 leading-tight">{m.label}</p>
+                    </div>
+                  ))}
+                </div>
+
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -160,12 +83,23 @@ export default function PortfolioGrid() {
                   ))}
                 </div>
 
-                {/* Result */}
-                <div className="flex items-center gap-2 pt-4 border-t border-white/5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00c2ff]" />
-                  <span className="text-[#00c2ff] text-xs font-semibold">
-                    {project.result}
-                  </span>
+                {/* Footer row */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-gray-600 text-xs">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                    </svg>
+                    <span>Team of {project.teamSize}</span>
+                  </div>
+                  <Link
+                    href={`/portfolio/${project.slug}`}
+                    className="text-[#00c2ff] text-xs font-semibold hover:underline flex items-center gap-1 group/link"
+                  >
+                    View Case Study
+                    <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>

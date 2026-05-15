@@ -7,10 +7,10 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 import CountUp from "@/components/ui/CountUp";
 
 const stats = [
-  { value: 100, suffix: "+", label: "Projects Delivered" },
-  { value: 50, suffix: "+", label: "Expert Engineers" },
-  { value: 30, suffix: "+", label: "Global Clients" },
-  { value: 5, suffix: "+", label: "Years of Experience" },
+  { value: 8, suffix: "+", label: "Projects Delivered" },
+  { value: 6, suffix: "", label: "Expert Engineers" },
+  { value: 8, suffix: "+", label: "Happy Clients" },
+  { value: 2, suffix: "+", label: "Years of Experience" },
 ];
 
 const floatingOrbs = [

@@ -11,8 +11,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email Us",
-    value: "hello@engineersdoor.com",
-    href: "mailto:hello@engineersdoor.com",
+    value: "engineersdoor.2022@gmail.com",
+    href: "mailto:engineersdoor.2022@gmail.com",
   },
   {
     icon: (
@@ -21,8 +21,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Call Us",
-    value: "+1 (555) 000-0000",
-    href: "tel:+15550000000",
+    value: "+880 1811-826554",
+    href: "tel:+8801811826554",
   },
   {
     icon: (
@@ -42,7 +42,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Working Hours",
-    value: "Mon – Fri, 9am – 6pm (BST)",
+    value: "Sun – Thu, 9am – 6pm (BST)",
     href: "#",
   },
 ];

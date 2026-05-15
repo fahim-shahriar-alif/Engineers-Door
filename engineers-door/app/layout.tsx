@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Engineers Door delivers end-to-end software development, IT consulting, and technology solutions that drive real business growth.",
   keywords: [
     "IT company", "software development", "web development", "mobile apps",
-    "cloud devops", "IT consulting", "tech talent", "Engineers Door",
+    "cloud devops", "IT consulting", "tech talent", "Engineers Door", "Dhaka", "Bangladesh",
   ],
   authors: [{ name: "Engineers Door", url: BASE_URL }],
   creator: "Engineers Door",

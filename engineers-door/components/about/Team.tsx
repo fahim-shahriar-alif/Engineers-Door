@@ -63,32 +63,24 @@ export default function Team() {
             Meet the Team
           </h2>
           <p className="mt-4 text-gray-400 max-w-xl mx-auto text-base">
-            A group of dedicated engineers, designers, and strategists who love
-            what they do and care about doing it well.
+            A dedicated group of engineers and designers based in Dhaka,
+            Bangladesh — passionate about building technology that works.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {team.map((member, index) => (
-            <div
-              key={member.name}
-              className="bg-[#0d1435] border border-white/5 rounded-xl p-7 hover:border-[#00c2ff]/30 transition-all duration-300 group"
-            >
-              {/* Avatar */}
-              <div
-                className={`w-14 h-14 rounded-full bg-gradient-to-br ${avatarColors[index]} flex items-center justify-center text-white font-bold text-lg mb-5`}
-              >
-                {member.initials}
-              </div>
-
-              {/* Info */}
-              <h3 className="text-white font-semibold text-lg">{member.name}</h3>
-              <p className="text-[#00c2ff] text-xs font-medium tracking-wide mt-0.5 mb-3">
-                {member.role}
-              </p>
-              <p className="text-gray-500 text-sm leading-relaxed">{member.bio}</p>
-            </div>
-          ))}
+        <div className="bg-[#0d1435] border border-white/5 rounded-2xl p-12 text-center">
+          <span className="text-5xl mb-5 block">👷</span>
+          <h3 className="text-white font-semibold text-lg mb-2">Team profiles coming soon</h3>
+          <p className="text-gray-500 text-sm max-w-sm mx-auto">
+            We're putting together our team page. In the meantime, feel free to
+            reach out and get to know us directly.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block mt-6 border border-[#00c2ff]/30 text-[#00c2ff] px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-[#00c2ff] hover:text-[#0a0f2c] transition-all duration-200"
+          >
+            Get in Touch →
+          </a>
         </div>
 
       </div>

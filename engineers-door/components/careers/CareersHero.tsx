@@ -33,9 +33,9 @@ export default function CareersHero() {
         {/* Quick stats */}
         <div className="mt-10 flex flex-wrap justify-center gap-6">
           {[
-            { value: "50+", label: "Team Members" },
+            { value: "6", label: "Team Members" },
             { value: "100%", label: "Remote Friendly" },
-            { value: "12+", label: "Open Roles" },
+            { value: "Always", label: "Open to Talent" },
           ].map((s) => (
             <div key={s.label} className="bg-[#0d1435] border border-white/5 rounded-xl px-8 py-4 text-center">
               <p className="text-2xl font-bold text-[#00c2ff]">{s.value}</p>

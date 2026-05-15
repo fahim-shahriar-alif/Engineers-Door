@@ -1,27 +1,27 @@
 const milestones = [
   {
-    year: "2019",
+    year: "2022",
     title: "The Beginning",
     description:
-      "Engineers Door was founded by a small group of engineers who believed great software should be accessible to every business, not just the big ones.",
+      "Engineers Door was founded in Dhaka, Bangladesh with a clear mission — to deliver high-quality software solutions that help businesses grow in a digital-first world.",
   },
   {
-    year: "2020",
-    title: "First Major Projects",
+    year: "2023",
+    title: "First Projects Delivered",
     description:
-      "We delivered our first enterprise-grade projects, building a reputation for quality, reliability, and on-time delivery.",
-  },
-  {
-    year: "2022",
-    title: "Team Expansion",
-    description:
-      "Our team grew to 20+ engineers across multiple disciplines — web, mobile, cloud, and design — serving clients across three continents.",
+      "We delivered our first set of projects, building a reputation for quality, reliability, and on-time delivery across web and mobile development.",
   },
   {
     year: "2024",
-    title: "Going Global",
+    title: "Growing the Team",
     description:
-      "With 100+ projects delivered and 30+ global clients, Engineers Door established itself as a trusted technology partner for businesses worldwide.",
+      "Our team expanded to 6 skilled engineers across web, mobile, and design disciplines, serving clients with diverse technology needs.",
+  },
+  {
+    year: "2025",
+    title: "8+ Projects & Counting",
+    description:
+      "With 8+ projects delivered and a growing client base, Engineers Door continues to build its reputation as a trusted technology partner.",
   },
 ];
 
@@ -40,18 +40,19 @@ export default function OurStory() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              From a Small Team to a{" "}
-              <span className="text-[#00c2ff]">Global Partner</span>
+              From Dhaka to the{" "}
+              <span className="text-[#00c2ff]">Digital World</span>
             </h2>
             <p className="text-gray-400 text-base leading-relaxed mb-4">
-              Engineers Door started with a simple belief — that businesses
-              deserve technology partners who actually care about outcomes, not
-              just deliverables.
+              Engineers Door was founded in 2022 in Dhaka, Bangladesh with a
+              simple belief — that every business deserves a technology partner
+              who genuinely cares about outcomes, not just deliverables.
             </p>
             <p className="text-gray-400 text-base leading-relaxed">
-              Over the years, we've grown from a handful of engineers into a
-              full-service IT company, but our core values have never changed:
-              transparency, craftsmanship, and a relentless focus on results.
+              In just a few years, we've grown into a focused team of engineers
+              delivering real results for real clients. Our core values have
+              never changed: transparency, craftsmanship, and a relentless
+              focus on what matters to our clients.
             </p>
           </div>
 

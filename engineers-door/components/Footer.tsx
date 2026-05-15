@@ -109,7 +109,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Engineers Door. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">
-            Built with precision by the Engineers Door team.
+            Founded 2022 · Dhaka, Bangladesh
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export type Project = {
   metrics: Metric[];
   result: string; // short for card
   color: string;
-  icon: string;
+  icon: string; // iconify icon name
   teamSize: number;
   timeline: TimelineStep[];
   features: string[];
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     ],
     result: "3x faster reporting",
     color: "from-[#0055ff] to-[#00c2ff]",
-    icon: "📊",
+    icon: "ph:chart-bar-bold",
     teamSize: 6,
     timeline: [
       { phase: "Discovery & Planning", duration: "2 weeks" },
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     ],
     result: "50K+ active users",
     color: "from-[#7c3aed] to-[#00c2ff]",
-    icon: "🏥",
+    icon: "ph:heartbeat-bold",
     teamSize: 8,
     timeline: [
       { phase: "Discovery & Compliance Review", duration: "3 weeks" },
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     ],
     result: "2x conversion rate",
     color: "from-[#00c2ff] to-[#7c3aed]",
-    icon: "🛒",
+    icon: "ph:storefront-bold",
     teamSize: 7,
     timeline: [
       { phase: "Audit & Planning", duration: "2 weeks" },
@@ -168,7 +168,7 @@ export const projects: Project[] = [
     ],
     result: "40% cost reduction",
     color: "from-[#0055ff] to-[#7c3aed]",
-    icon: "☁️",
+    icon: "ph:cloud-arrow-up-bold",
     teamSize: 5,
     timeline: [
       { phase: "Architecture Assessment", duration: "3 weeks" },
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     ],
     result: "10K+ enrolled students",
     color: "from-[#7c3aed] to-[#0055ff]",
-    icon: "🎓",
+    icon: "ph:graduation-cap-bold",
     teamSize: 6,
     timeline: [
       { phase: "Requirements & Design", duration: "3 weeks" },
@@ -246,7 +246,7 @@ export const projects: Project[] = [
     ],
     result: "30% fuel savings",
     color: "from-[#00c2ff] to-[#0055ff]",
-    icon: "🚛",
+    icon: "ph:truck-bold",
     teamSize: 5,
     timeline: [
       { phase: "Discovery & Mapping", duration: "2 weeks" },
@@ -285,7 +285,7 @@ export const projects: Project[] = [
     ],
     result: "50% faster UI dev",
     color: "from-[#7c3aed] to-[#00c2ff]",
-    icon: "🎨",
+    icon: "ph:paint-brush-bold",
     teamSize: 4,
     timeline: [
       { phase: "UI Audit", duration: "2 weeks" },
@@ -324,7 +324,7 @@ export const projects: Project[] = [
     ],
     result: "Zero security incidents",
     color: "from-[#0055ff] to-[#00c2ff]",
-    icon: "🔐",
+    icon: "ph:shield-check-bold",
     teamSize: 4,
     timeline: [
       { phase: "Security Audit", duration: "2 weeks" },
@@ -363,7 +363,7 @@ export const projects: Project[] = [
     ],
     result: "18-month roadmap delivered",
     color: "from-[#00c2ff] to-[#7c3aed]",
-    icon: "🏪",
+    icon: "ph:path-bold",
     teamSize: 3,
     timeline: [
       { phase: "Stakeholder Interviews", duration: "2 weeks" },

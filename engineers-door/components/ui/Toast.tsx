@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Icon } from "@iconify/react";
 
 type ToastType = "success" | "error" | "info";
 
@@ -21,22 +22,10 @@ export function useToast() {
   return useContext(ToastContext);
 }
 
-const icons = {
-  success: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-    </svg>
-  ),
-  error: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-    </svg>
-  ),
-  info: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-    </svg>
-  ),
+const icons: Record<ToastType, string> = {
+  success: "ph:check-circle-bold",
+  error: "ph:x-circle-bold",
+  info: "ph:info-bold",
 };
 
 const styles = {
@@ -73,7 +62,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className={`pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl border shadow-xl shadow-black/30 text-sm font-medium max-w-xs ${styles[toast.type]}`}
             >
-              <span className="flex-shrink-0">{icons[toast.type]}</span>
+              <span className="flex-shrink-0"><Icon icon={icons[toast.type]} className="w-5 h-5" /></span>
               <span className="text-white">{toast.message}</span>
             </motion.div>
           ))}

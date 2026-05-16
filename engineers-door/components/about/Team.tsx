@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react";
+
 const team = [
   {
     name: "Aryan Hossain",
@@ -69,7 +71,9 @@ export default function Team() {
         </div>
 
         <div className="bg-[#0d1435] border border-white/5 rounded-2xl p-12 text-center">
-          <span className="text-5xl mb-5 block">👷</span>
+          <div className="w-16 h-16 rounded-2xl bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff] mx-auto mb-5">
+            <Icon icon="ph:users-three-bold" className="w-8 h-8" />
+          </div>
           <h3 className="text-white font-semibold text-lg mb-2">Team profiles coming soon</h3>
           <p className="text-gray-500 text-sm max-w-sm mx-auto">
             We're putting together our team page. In the meantime, feel free to

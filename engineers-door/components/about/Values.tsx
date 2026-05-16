@@ -1,36 +1,38 @@
+import { Icon } from "@iconify/react";
+
 const values = [
   {
-    icon: "🎯",
+    icon: "ph:target-bold",
     title: "Results-Driven",
     description:
       "We measure success by the impact we create for our clients, not the hours we log.",
   },
   {
-    icon: "🤝",
+    icon: "ph:eye-bold",
     title: "Transparency",
     description:
       "No surprises. We communicate openly about progress, challenges, and decisions at every step.",
   },
   {
-    icon: "⚙️",
+    icon: "ph:wrench-bold",
     title: "Craftsmanship",
     description:
       "We take pride in writing clean, maintainable code and building systems that stand the test of time.",
   },
   {
-    icon: "🚀",
+    icon: "ph:rocket-launch-bold",
     title: "Continuous Growth",
     description:
       "Technology never stops evolving, and neither do we. Our team is always learning and improving.",
   },
   {
-    icon: "🌍",
+    icon: "ph:globe-bold",
     title: "Inclusivity",
     description:
       "We build diverse teams and welcome engineers from all backgrounds, cultures, and experience levels.",
   },
   {
-    icon: "🔒",
+    icon: "ph:seal-check-bold",
     title: "Integrity",
     description:
       "We do what we say, say what we mean, and always act in the best interest of our clients and team.",
@@ -61,7 +63,9 @@ export default function Values() {
               key={value.title}
               className="bg-[#0d1435] border border-white/5 rounded-xl p-7 hover:border-[#00c2ff]/30 transition-all duration-300"
             >
-              <span className="text-3xl mb-4 block">{value.icon}</span>
+              <div className="w-12 h-12 rounded-lg bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff] mb-5">
+                <Icon icon={value.icon} className="w-6 h-6" />
+              </div>
               <h3 className="text-white font-semibold text-lg mb-2">
                 {value.title}
               </h3>

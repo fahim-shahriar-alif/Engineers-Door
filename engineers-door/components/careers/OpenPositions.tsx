@@ -73,7 +73,9 @@ export default function OpenPositions() {
           </div>
 
           <div className="bg-[#0d1435] border border-white/5 rounded-2xl p-12 text-center max-w-2xl mx-auto">
-            <span className="text-5xl mb-5 block">📭</span>
+            <div className="w-16 h-16 rounded-2xl bg-[#00c2ff]/10 border border-[#00c2ff]/20 flex items-center justify-center text-[#00c2ff] mx-auto mb-5">
+              <Icon icon="ph:envelope-open-bold" className="w-8 h-8" />
+            </div>
             <h3 className="text-white font-semibold text-lg mb-2">
               No open positions right now
             </h3>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Icon } from "@iconify/react";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -26,9 +27,7 @@ export default function ScrollToTop() {
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-          </svg>
+          <Icon icon="ph:arrow-up-bold" className="w-5 h-5" />
         </motion.button>
       )}
     </AnimatePresence>

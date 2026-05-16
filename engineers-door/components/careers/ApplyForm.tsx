@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import { useToast } from "@/components/ui/Toast";
 
 export default function ApplyForm() {
@@ -50,9 +51,7 @@ export default function ApplyForm() {
           {submitted ? (
             <div className="flex flex-col items-center justify-center text-center py-12">
               <div className="w-16 h-16 rounded-full bg-[#00c2ff]/10 border border-[#00c2ff]/30 flex items-center justify-center text-[#00c2ff] mb-5">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
+                <Icon icon="ph:check-bold" className="w-8 h-8" />
               </div>
               <h3 className="text-white text-xl font-bold mb-2">Application Received!</h3>
               <p className="text-gray-400 text-sm max-w-xs">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import AnimateIn from "@/components/ui/AnimateIn";
 import type { Post } from "@/lib/blogData";
 
@@ -21,7 +22,9 @@ export default function FeaturedPost({ post }: { post: Post }) {
 
               {/* Left — Visual */}
               <div className={`bg-gradient-to-br ${post.gradient} p-12 flex flex-col justify-between min-h-[280px]`}>
-                <span className="text-6xl">{post.icon}</span>
+                <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-white">
+                  <Icon icon={post.icon} className="w-9 h-9" />
+                </div>
                 <div>
                   <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
                     {post.category}

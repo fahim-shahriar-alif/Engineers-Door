@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import AnimateIn from "@/components/ui/AnimateIn";
 import { categories, type Post } from "@/lib/blogData";
 
@@ -51,7 +52,9 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
 
                   {/* Card top */}
                   <div className={`bg-gradient-to-br ${post.gradient} p-8 flex items-end justify-between`}>
-                    <span className="text-4xl">{post.icon}</span>
+                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white">
+                      <Icon icon={post.icon} className="w-7 h-7" />
+                    </div>
                     <span className="text-white/70 text-xs font-semibold bg-white/10 px-3 py-1 rounded-full">
                       {post.category}
                     </span>

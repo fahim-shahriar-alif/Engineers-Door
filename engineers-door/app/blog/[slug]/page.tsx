@@ -158,7 +158,9 @@ export default async function BlogPostPage({
         <div className="max-w-3xl mx-auto">
           {/* Gradient banner */}
           <div className={`bg-gradient-to-br ${post.gradient} rounded-2xl p-10 flex items-center justify-center mb-12`}>
-            <span className="text-7xl">{post.icon}</span>
+            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-white">
+              <Icon icon={post.icon} className="w-12 h-12" />
+            </div>
           </div>
 
           <article className="prose-custom">
@@ -177,7 +179,9 @@ export default async function BlogPostPage({
                 <Link key={r.slug} href={`/blog/${r.slug}`}>
                   <div className="group bg-[#0d1435] border border-white/5 rounded-xl overflow-hidden hover:border-[#00c2ff]/30 transition-all duration-300">
                     <div className={`bg-gradient-to-br ${r.gradient} p-6 flex items-center justify-between`}>
-                      <span className="text-3xl">{r.icon}</span>
+                      <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white">
+                        <Icon icon={r.icon} className="w-6 h-6" />
+                      </div>
                       <span className="text-white/70 text-xs bg-white/10 px-2.5 py-1 rounded-full">{r.readTime}</span>
                     </div>
                     <div className="p-5">

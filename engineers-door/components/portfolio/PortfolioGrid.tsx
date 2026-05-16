@@ -41,7 +41,9 @@ export default function PortfolioGrid() {
             >
               {/* Card Header */}
               <div className={`bg-gradient-to-br ${project.color} p-8 flex items-start justify-between`}>
-                <span className="text-4xl">{project.icon}</span>
+                <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-white">
+                  <Icon icon={project.icon} className="w-8 h-8" />
+                </div>
                 <div className="flex flex-col items-end gap-2">
                   <span className="text-white/80 text-xs font-semibold tracking-widest uppercase bg-white/10 px-3 py-1 rounded-full">
                     {project.category}

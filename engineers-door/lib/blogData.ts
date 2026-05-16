@@ -28,7 +28,7 @@ export const posts: Post[] = [
     readTime: "8 min read",
     featured: true,
     gradient: "from-[#0055ff] to-[#00c2ff]",
-    icon: "🏗️",
+    icon: "ph:buildings-bold",
     body: `Building a SaaS product that can scale from 10 users to 100,000 requires deliberate architectural decisions from day one. In this post, we'll walk through the key decisions we make when starting a new SaaS project with Next.js and PostgreSQL.
 
 ## Choosing the Right Architecture
@@ -80,7 +80,7 @@ Building scalable SaaS isn't about using the most sophisticated tools — it's a
     date: "Apr 28, 2026",
     readTime: "6 min read",
     gradient: "from-[#7c3aed] to-[#0055ff]",
-    icon: "⚙️",
+    icon: "ph:gear-six-bold",
     body: `A well-designed CI/CD pipeline is one of the highest-leverage investments an engineering team can make. It catches bugs before they reach production, reduces deployment anxiety, and lets your team ship with confidence.
 
 ## What a Good Pipeline Looks Like
@@ -127,7 +127,7 @@ The goal is to make deployment a non-event. When your pipeline is solid, deployi
     date: "Apr 15, 2026",
     readTime: "5 min read",
     gradient: "from-[#00c2ff] to-[#7c3aed]",
-    icon: "🎨",
+    icon: "ph:pen-nib-bold",
     body: `Enterprise software has a reputation for being clunky, confusing, and ugly. It doesn't have to be. The same design principles that make consumer apps delightful apply to enterprise tools — they just need to be applied with a different set of constraints in mind.
 
 ## Start With the User's Job
@@ -170,7 +170,7 @@ The biggest mistake in enterprise UX is designing in isolation. Get your designs
     date: "Apr 5, 2026",
     readTime: "7 min read",
     gradient: "from-[#0055ff] to-[#7c3aed]",
-    icon: "📱",
+    icon: "ph:device-mobile-bold",
     body: `We've shipped production apps with both React Native and Flutter. Here's our honest take on which to choose in 2026.
 
 ## The Short Answer
@@ -221,7 +221,7 @@ Both are excellent choices in 2026. The decision should be driven by your team's
     date: "Mar 22, 2026",
     readTime: "9 min read",
     gradient: "from-[#00c2ff] to-[#0055ff]",
-    icon: "☁️",
+    icon: "ph:cloud-bold",
     body: `Cloud costs have a way of creeping up quietly. One day you're paying $2,000/month, and six months later you're at $8,000 without a clear explanation. Here's how we approached a recent cost optimization engagement that cut a client's AWS bill by 40%.
 
 ## Start With Visibility
@@ -272,7 +272,7 @@ The biggest change isn't technical — it's cultural. Cloud cost optimization ne
     date: "Mar 10, 2026",
     readTime: "4 min read",
     gradient: "from-[#7c3aed] to-[#00c2ff]",
-    icon: "🤝",
+    icon: "ph:handshake-bold",
     body: `Remote work has been the default at Engineers Door since we started. Over the years, we've hired dozens of engineers and learned a lot about what separates people who thrive in remote environments from those who struggle.
 
 ## Technical Skills Are Table Stakes

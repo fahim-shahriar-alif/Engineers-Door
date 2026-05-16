@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function Newsletter() {
@@ -40,9 +41,7 @@ export default function Newsletter() {
               {submitted ? (
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#00c2ff]/10 border border-[#00c2ff]/30 flex items-center justify-center text-[#00c2ff]">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
+                    <Icon icon="ph:check-bold" className="w-6 h-6" />
                   </div>
                   <p className="text-white font-medium">You're subscribed!</p>
                   <p className="text-gray-500 text-sm">We'll be in touch soon.</p>

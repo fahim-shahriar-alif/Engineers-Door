@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 export type FAQItem = {
@@ -48,9 +49,7 @@ export default function FAQ({ items, title = "Frequently Asked Questions" }: { i
                       ? "border-[#00c2ff] text-[#00c2ff] rotate-45"
                       : "border-white/20 text-gray-400"
                   }`}>
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
+                    <Icon icon="ph:plus-bold" className="w-3 h-3" />
                   </span>
                 </button>
 

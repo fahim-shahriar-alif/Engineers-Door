@@ -10,8 +10,10 @@ export function useTypewriter(text: string, speed = 40, startDelay = 600) {
     setDisplayed("");
     setDone(false);
     let i = 0;
+    let interval: ReturnType<typeof setInterval>;
+
     const timeout = setTimeout(() => {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         setDisplayed(text.slice(0, i + 1));
         i++;
         if (i >= text.length) {
@@ -19,9 +21,13 @@ export function useTypewriter(text: string, speed = 40, startDelay = 600) {
           setDone(true);
         }
       }, speed);
-      return () => clearInterval(interval);
     }, startDelay);
-    return () => clearTimeout(timeout);
+
+    // Cleanup both timeout and interval on unmount or dep change
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
   }, [text, speed, startDelay]);
 
   return { displayed, done };

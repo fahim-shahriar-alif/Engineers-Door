@@ -13,14 +13,15 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  const featured = posts.find((p) => p.featured)!;
-  const rest = posts.filter((p) => !p.featured);
+  // Fall back to the first post if none is explicitly marked featured
+  const featured = posts.find((p) => p.featured) ?? posts[0];
+  const rest = posts.filter((p) => p.slug !== featured?.slug);
 
   return (
     <main>
       <Navbar />
       <BlogHero />
-      <FeaturedPost post={featured} />
+      {featured && <FeaturedPost post={featured} />}
       <BlogGrid posts={rest} />
       <Newsletter />
       <Footer />

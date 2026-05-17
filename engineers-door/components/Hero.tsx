@@ -10,7 +10,7 @@ const stats = [
   { value: 8, suffix: "+", label: "Projects Delivered" },
   { value: 6, suffix: "", label: "Expert Engineers" },
   { value: 8, suffix: "+", label: "Happy Clients" },
-  { value: 2, suffix: "+", label: "Years of Experience" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
 ];
 
 const floatingOrbs = [

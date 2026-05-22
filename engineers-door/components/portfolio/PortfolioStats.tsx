@@ -1,5 +1,5 @@
 const stats = [
-  { value: "9+", label: "Projects Delivered" },
+  { value: "15+", label: "Projects Delivered" },
   { value: "6", label: "Industries Served" },
   { value: "4", label: "Regions" },
   { value: "100%", label: "On-time Delivery" },

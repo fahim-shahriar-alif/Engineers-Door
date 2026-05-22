@@ -19,9 +19,9 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "8+ Projects & Counting",
+    title: "15+ Projects & Counting",
     description:
-      "With 8+ projects delivered and a growing client base, Engineers Door continues to build its reputation as a trusted technology partner.",
+      "With 15+ projects delivered and a growing client base, Engineers Door continues to build its reputation as a trusted technology partner.",
   },
 ];
 

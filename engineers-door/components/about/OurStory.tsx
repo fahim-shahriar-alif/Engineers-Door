@@ -15,7 +15,7 @@ const milestones = [
     year: "2024",
     title: "Growing the Team",
     description:
-      "Our team expanded to 6 skilled engineers across web, mobile, and design disciplines, serving clients with diverse technology needs.",
+      "Our team expanded to 4 skilled engineers across web, mobile, and design disciplines, serving clients with diverse technology needs.",
   },
   {
     year: "2025",

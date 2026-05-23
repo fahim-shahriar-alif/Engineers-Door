@@ -8,7 +8,7 @@ import CountUp from "@/components/ui/CountUp";
 
 const stats = [
   { value: 15, suffix: "+", label: "Projects Delivered" },
-  { value: 6, suffix: "", label: "Expert Engineers" },
+  { value: 4, suffix: "", label: "Expert Engineers" },
   { value: 15, suffix: "+", label: "Happy Clients" },
   { value: 1, suffix: "+", label: "Years of Experience" },
 ];

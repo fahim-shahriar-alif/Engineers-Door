@@ -33,7 +33,7 @@ export default function CareersHero() {
         {/* Quick stats */}
         <div className="mt-10 flex flex-wrap justify-center gap-6">
           {[
-            { value: "6", label: "Team Members" },
+            { value: "4", label: "Team Members" },
             { value: "100%", label: "Remote Friendly" },
             { value: "Always", label: "Open to Talent" },
           ].map((s) => (

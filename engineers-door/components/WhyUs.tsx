@@ -57,7 +57,7 @@ export default function WhyUs() {
             The Difference Is in the Details
           </h2>
           <p className="mt-4 text-gray-400 max-w-xl mx-auto text-base md:text-lg">
-            We don't just write code — we solve problems, build relationships,
+            We don&apos;t just write code — we solve problems, build relationships,
             and deliver results that matter.
           </p>
         </AnimateIn>

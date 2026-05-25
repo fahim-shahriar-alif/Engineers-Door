@@ -1,5 +1,4 @@
-"use client";
-
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import AnimateIn from "@/components/ui/AnimateIn";
 
@@ -111,14 +110,14 @@ export default function HowWeWork() {
         <AnimateIn delay={0.4}>
           <div className="mt-14 text-center">
             <p className="text-gray-500 text-sm mb-4">
-              Ready to get started? The first call is free and there's no commitment.
+              Ready to get started? The first call is free and there&apos;s no commitment.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-[#00c2ff] text-[#0a0f2c] px-8 py-3.5 rounded-md font-semibold text-sm hover:bg-white transition-colors duration-200"
             >
               Start a Conversation →
-            </a>
+            </Link>
           </div>
         </AnimateIn>
 

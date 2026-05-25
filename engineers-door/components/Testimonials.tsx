@@ -106,7 +106,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="mt-4 text-gray-400 max-w-xl mx-auto text-base">
-            Don't take our word for it — here's what the people we've worked
+            Don&apos;t take our word for it — here&apos;s what the people we&apos;ve worked
             with have to say.
           </p>
         </AnimateIn>
@@ -128,7 +128,7 @@ export default function Testimonials() {
 
                 {/* Quote */}
                 <p className="text-gray-300 text-sm leading-relaxed flex-1">
-                  "{t.quote}"
+                  &quot;{t.quote}&quot;
                 </p>
 
                 {/* Author */}

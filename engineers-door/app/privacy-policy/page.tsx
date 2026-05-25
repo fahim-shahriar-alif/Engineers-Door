@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-invert prose-sm max-w-none text-gray-400 space-y-6">
             <p>Last updated: May 2026</p>
             <p>
-              Engineers Door ("we", "our", or "us") is committed to protecting
+              Engineers Door (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting
               your privacy. This Privacy Policy explains how we collect, use,
               and safeguard your information when you visit our website or use
               our services.

@@ -49,7 +49,7 @@ export default function OurStory() {
               who genuinely cares about outcomes, not just deliverables.
             </p>
             <p className="text-gray-400 text-base leading-relaxed">
-              In just a few years, we've grown into a focused team of engineers
+              In just a few years, we&apos;ve grown into a focused team of engineers
               delivering real results for real clients. Our core values have
               never changed: transparency, craftsmanship, and a relentless
               focus on what matters to our clients.

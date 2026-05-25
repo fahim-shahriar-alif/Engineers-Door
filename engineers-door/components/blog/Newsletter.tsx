@@ -43,8 +43,8 @@ export default function Newsletter() {
                   <div className="w-12 h-12 rounded-full bg-[#00c2ff]/10 border border-[#00c2ff]/30 flex items-center justify-center text-[#00c2ff]">
                     <Icon icon="ph:check-bold" className="w-6 h-6" />
                   </div>
-                  <p className="text-white font-medium">You're subscribed!</p>
-                  <p className="text-gray-500 text-sm">We'll be in touch soon.</p>
+                  <p className="text-white font-medium">You&apos;re subscribed!</p>
+                  <p className="text-gray-500 text-sm">We&apos;ll be in touch soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

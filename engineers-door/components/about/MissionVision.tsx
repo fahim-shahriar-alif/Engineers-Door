@@ -24,7 +24,7 @@ export default function MissionVision() {
                 Our mission is to deliver high-quality, scalable technology
                 solutions that empower businesses to grow, compete, and succeed
                 in a digital-first world. We do this by combining deep technical
-                expertise with a genuine commitment to our clients' success.
+                expertise with a genuine commitment to our clients&apos; success.
               </p>
             </div>
           </div>
